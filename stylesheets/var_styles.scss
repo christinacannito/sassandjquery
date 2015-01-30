@@ -1,0 +1,43 @@
+$myColor1: pink; 
+$myColor2: blue; 
+$favFont: 15px; 
+$forBoxes: 2px dotted black; 
+
+h1, h2 { 
+
+	background-color: $myColor1; 
+	color: $myColor2;
+}
+
+body {
+	background-color: $myColor2;
+}
+
+p { 
+	font-size: $favFont; 
+}
+
+#border { 
+	border: $forBoxes;
+}
+
+.content {
+	p {
+		color: white; 
+	}
+
+	a {
+		color: yellow; 
+	}
+}
+
+@mixin commonTraits {
+	border-radius: 10px; 
+	border: 10px solid pink; 
+	padding: 10px; 
+}
+
+header { 
+	color: white;
+	@include commonTraits; 
+}
